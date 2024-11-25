@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coder.schoolsecondhandtradingplatform.mapper.AuctionMapper">
+
+    <insert id="addAuction" useGeneratedKeys="true" keyProperty="auctionId">
+        INSERT INTO auctions
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+
+            <if test="sellerId != null and sellerId != ''">seller_id,</if>
+
+            <if test="title != null and title != ''">title,</if>
+
+            <if test="description != null and description != ''">description,</if>
+
+            <if test="startPrice != null and startPrice != ''">start_price,</if>
+
+            <if test="currentPrice != null and currentPrice != ''">current_price,</if>
+
+            <if test="endTime != null and endTime != ''">end_time,</if>
+
+        </trim>
+        <trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+
+            <if test="sellerId != null and sellerId != ''">#{sellerId},</if>
+
+            <if test="title != null and title != ''">#{title},</if>
+
+            <if test="description != null and description != ''">#{description},</if>
+
+            <if test="startPrice != null and startPrice != ''">#{startPrice},</if>
+
+            <if test="currentPrice != null and currentPrice != ''">#{currentPrice},</if>
+
+            <if test="endTime != null and endTime != ''">#{endTime},</if>
+        </trim>
+    </insert>
+    <update id="editAuction">
+        UPDATE auctions
+        <set>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="startPrice != null and startPrice != ''">
+                start_price = #{startPrice},
+            </if>
+            <if test="currentPrice != null and currentPrice != ''">
+                current_price = #{currentPrice},
+            </if>
+            <if test="endTime != null and endTime != ''">
+                end_time = #{endTime},
+            </if>
+        </set>
+        WHERE auction_id = #{auctionId}
+    </update>
+    <select id="list" resultType="com.coder.schoolsecondhandtradingplatform.pojo.Auction">
+        select * from auctions
+    </select>
+    <select id="getAuctionById" resultType="com.coder.schoolsecondhandtradingplatform.pojo.Auction">
+        select * from auctions where auction_id = #{auctionId}
+    </select>
+</mapper>
