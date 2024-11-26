@@ -6,11 +6,12 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath></relativePath>
     </parent>
-    <groupId>com.coder</groupId>
+    <groupId>com.coder.schoolsecondhandtradingplatform</groupId>
     <artifactId>school-second-hand-trading-platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>school-second-hand-trading-platform</name>
     <description>school-second-hand-trading-platform</description>
     <url/>
@@ -20,6 +21,12 @@
     <developers>
         <developer/>
     </developers>
+    <modules>
+        <module>Auction-mall-common</module>
+        <module>Auction-mall-controller</module>
+        <module>Auction-mall-pojo</module>
+        <module>Auction-mall-service</module>
+    </modules>
     <scm>
         <connection/>
         <developerConnection/>
@@ -117,6 +124,7 @@
                     </excludes>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
