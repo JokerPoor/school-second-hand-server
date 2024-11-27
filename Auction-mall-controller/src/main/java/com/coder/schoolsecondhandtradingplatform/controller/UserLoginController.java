@@ -20,6 +20,7 @@ import org.springframework.util.DigestUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +28,8 @@ import java.util.UUID;
 
 @RestController
 @Tag(name = "UserController", description = "用户相关操作")
-public class UserController {
+@RequestMapping("/user")
+public class UserLoginController {
 
     @Autowired
     private UserService userService;

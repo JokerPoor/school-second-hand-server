@@ -24,7 +24,8 @@ import jakarta.validation.Valid;
 
 @Slf4j
 @RestController
-@Tag(name = "AuctionController", description = "教材拍卖相关操作")
+@Tag(name = "AuctionController", description = "教材拍卖相关操作")    // 标签描述
+@RequestMapping("/api/v1")
 public class AuctionController {
 
     @Autowired

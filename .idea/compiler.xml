@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Auction-mall-common" />
+        <module name="Auction-mall-pojo" />
+        <module name="Auction-mall-controller" />
+        <module name="Auction-mall-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Auction-mall-common" options="-parameters" />
+      <module name="Auction-mall-controller" options="-parameters" />
+      <module name="Auction-mall-pojo" options="-parameters" />
+      <module name="Auction-mall-service" options="-parameters" />
+      <module name="school-second-hand-trading-platform" options="" />
+    </option>
+  </component>
+</project>
