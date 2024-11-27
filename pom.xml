@@ -27,6 +27,7 @@
         <module>Auction-mall-pojo</module>
         <module>Auction-mall-service</module>
     </modules>
+<!--    adhasd-->
     <scm>
         <connection/>
         <developerConnection/>

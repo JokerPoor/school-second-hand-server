@@ -17,10 +17,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Auction-mall-common" options="-parameters" />
-      <module name="Auction-mall-controller" options="-parameters" />
-      <module name="Auction-mall-pojo" options="-parameters" />
-      <module name="Auction-mall-service" options="-parameters" />
+      <module name="Auction-mall-common" options="" />
+      <module name="Auction-mall-controller" options="" />
+      <module name="Auction-mall-pojo" options="" />
+      <module name="Auction-mall-service" options="" />
       <module name="school-second-hand-trading-platform" options="" />
     </option>
   </component>
